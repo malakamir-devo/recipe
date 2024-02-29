@@ -1,0 +1,263 @@
+/* IMPORTS */
+@font-face {
+    font-family: 'Young-Serif';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/static/Outfit-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Outfit-smbold';
+    src: url(./assets/fonts/outfit/static/Outfit-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Outfit-b';
+    src: url(./assets/fonts/outfit/static/Outfit-Bold.ttf);
+    font-weight: 700;
+}
+
+/* REST */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* GLOBAL */
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --dark-rose: #783853;
+}
+
+body {
+    background-color: var(--Eggshell);
+}
+
+/* PAGE CONTENT */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 50%;
+    background-color: var(--White);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box img {
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-family: 'Young-Serif';
+    margin-bottom: 10px;
+}
+
+.para {
+    margin-bottom: 30px;
+    font-family: 'Outfit';
+    color: var(--Wenge-Brown);
+}
+
+.sub-box-1 {
+    padding: 20px;
+    background-color: var(--Rose-White);
+    border-radius: 12px;
+    margin-bottom: 30px;
+
+}
+
+.sub-box-1 h2 {
+    margin-bottom: 20px;
+    font-family: 'Outfit';
+    color: var(--Dark-Charcoal);
+}
+
+
+.sub-box-1 li {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: relative;
+    font-family: 'Outfit';
+
+}
+
+.sub-box-1 li::before {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 4px;
+    background-color: #783853;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -12px;
+}
+
+.sub-box-1 li span {
+    color: var(--dark-rose);
+    font-family: 'Outfit-b';
+    font-weight: 700;
+}
+
+.sub-box-2 {
+    border-bottom: 1px solid var(--Wenge-Brown);
+    padding-bottom: 10px;
+}
+
+.sub-title {
+    margin: 10px 0px;
+    font-size: 2.5rem;
+    color: var(--Dark-Charcoal);
+    margin-bottom: 20px;
+}
+
+.sub-box-2 ul {
+    margin: 20px;
+}
+
+.sub-box-2 li {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    position: relative;
+    font-family: 'Outfit';
+    color: var(--Wenge-Brown);
+}
+
+.sub-box-2 li::before {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 4px;
+    background-color: #783853;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -24px;
+}
+
+.sub-box-3 ul {
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.sub-box-3 ul li {
+    margin: 20px;
+    margin-left: 10px;
+    position: relative;
+    font-family: 'Outfit';
+}
+
+.sub-box-3 ul li span {
+    font-family: 'Outfit-b';
+    color: var(--Dark-Charcoal);
+}
+
+.sub-box-3 li::before {
+    position: absolute;
+    content: attr(data-set);
+    height: 10px;
+    width: 10px;
+    color: #783853;
+    top: 3px;
+    font-family: 'Outfit-b';
+    transform: translateY(-50%);
+    left: -24px;
+    font-size: 1.1rem;
+}
+
+.sub-box-3 {
+    border-bottom: 1px solid var(--Wenge-Brown);
+    padding-bottom: 10px;
+}
+
+.info-box-content {
+    margin-top: 20px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.info-box-content:not(:last-child) {
+    border-bottom: 1px solid var(--Dark-Charcoal);
+
+}
+
+.col {
+    width: 50%;
+    font-family: 'Outfit';
+    color: var(--Wenge-Brown);
+}
+
+.bold {
+    font-family: 'Outfit-b';
+    color: var(--Dark-Charcoal);
+}
+
+h2 {
+    color: #7f4a33 !important;
+}
+
+.sub-box-3 p {
+    color: var(--Wenge-Brown);
+}
+
+@media screen and (max-width:700px) {
+    .box {
+        width: 100%;
+        padding: 0;
+    }
+
+    .box img {
+        border-radius: 0;
+        height: 200px;
+
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .box>div,
+    .box h1,
+    .box p {
+        padding: 0px 20px !important;
+    }
+
+}
